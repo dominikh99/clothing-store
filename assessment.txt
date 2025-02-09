@@ -1,0 +1,68 @@
+// Question 1
+const func1 = (chars) => {
+
+    const map = {};
+
+    const array = [];
+
+    for(let i = 0; i < chars.length; i++) {
+        let currentLetter = chars[i];
+
+        if(map[currentLetter]) {
+            map[currentLetter]++;
+        } else {
+            map[currentLetter] = 1;
+        }
+
+        if(map[currentLetter] === 2) {
+            array.push(currentLetter);
+        }
+    }
+    
+    return array; 
+}
+
+// Time complexity: O(n) - The function iterates through the entire string or array once.
+// Space Complexity: O(n) - In the worst case, the hash table/object stores all the characters.
+
+// Question 2
+Out of unit, integration, and system tests, unit tests are the smallest because they focus on small pieces of code to test
+individual functions, methods, or components in isolation. The idea is to make sure that each unit, i.e. function, method, etc.
+works as intended. 
+
+An integration tests checks how different modules or components work together. For example, this could be a function or API
+that fetches data from a source to display information on the client side. An integration test would be to see if such a function
+works correctly when integrated into a larger component or module to discover potential issues in how the data flows.
+
+A system test, as the name suggests, tests the whole system or in this case the application as a whole. The goal is to verify
+that all implemented features and components work together correctly in a live environment. 
+
+// Question 3
+Yes, the Singleton Pattern is a common design pattern. The idea behind it is to have a class with only one instance that can be accessed 
+globally. An example would be global state management with Redux in a React application. The reason is that Redux creates
+a single source of truth with only one Redux store that can be accessed globally by the application's components.
+
+// Question 4 
+A multi-process application contains multiple independent processes that are running in parallel where each process
+has its own memory space. For example, this is good practice because running on isolated memory spaces increases security since
+the risk of one affecting the other is reduced. It also provides stability because one process won't affect others if it crashes.
+On the other hand, the obvious drawback is the higher memory usage because each process has its own memory space and creating 
+new processes is more expensive than creating a new thread. 
+
+In multi-threaded applications, multiple threads exist within the same process, sharing the same memory space. Compared to
+multi-process apps, this would reduce memory usage. It also allows for faster context switching because switching between
+threads is easier than doing it between processes. The drawbacks include harder debugging due to concurrency issues being
+difficult to detect as well as the fact that there is a single point of failure, i.e. if one thread crashes, the entire process
+may crash.
+
+// Question 5
+In my situation, there are two ways I can answer this question. On the one hand, in technical support, the most boring
+part about it is the repetitiveness of questions that come in. After a while you notice a pattern of things that people ask 
+over and over again, however, the fact that I'm actually helping people and, in a way, making their life easier, is definitely satisfying.
+
+When it comes to software engineering, there's generally always something new to learn and an engineer will never know absolutely
+everything. So, for me, by far the most boring thing is having to read through different API or developer documentation of tools
+that I haven't used before when developing an app because I'm not the type of person who likes to read big blocks of text.
+The most satisfying part is a little more difficult to answer. To me, the entire concept of software engineering is satisfying, 
+that is coming up with an idea for an app, doing the research about tools needed, designing the app and in the end, developing
+it into a finished product. There is something inherently satisfying about the whole process, in my opinion. 
